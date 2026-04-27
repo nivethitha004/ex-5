@@ -1,0 +1,37 @@
+package com.example.ex5;
+
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add("New");
+        menu.add("Open");
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getTitle().equals("New")) {
+            Toast.makeText(this, "New Selected", Toast.LENGTH_SHORT).show();
+        }
+        else if (item.getTitle().equals("Open")) {
+            Toast.makeText(this, "Open Selected", Toast.LENGTH_SHORT).show();
+        }
+
+        return true;
+    }
+}
